@@ -67,7 +67,7 @@ sources:
 ### 모아(MoA) 지식그물 운영 📦
 - **해야 할 일**:
   - ✅ 첫 ingest 완료 (wiki 8페이지)
-  - ⬜ Hermes cron 설정 (5분마다 git pull)
+  - ✅ Hermes cron 설정 완료 (매일 오전 8시 텔레그램+메일 알림)
   - ⬜ 주 1회 lint 검사
   - ⬜ Q/Qwen + 잔/JAN.AI 페이지 작성
 
