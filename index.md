@@ -11,6 +11,7 @@
 - [[ag]] — AG: Antigravity IDE, 인프라·아키텍처 (2026-06-18)
 - [[julia]] — 김소영: 메타 AI 랩스 이사장, 영어교육·AI·XR (2026-06-18)
 - [[meta-ai-labs]] — 메타 AI 랩스 협동조합: AI·XR 융합 교육 (2026-06-18)
+- [[hermes-studio]] — Hermes Studio (Web UI): http://localhost:8648, 헤나 메인 인터페이스 (2026-06-18)
 
 ## concept
 - [[agent-team]] — 5인 AI 에이전트 협업 체계 (2026-06-18)

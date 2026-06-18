@@ -20,3 +20,7 @@
 - 생성: [[meta-ai-labs]] (entity) — 메타 AI 랩스 협동조합 (이사진, 10대 사업, 정관)
 - 생성: [[julia]] (entity) — 김소영 프로필 (학력, 자격, 경력, 저서, 예술 활동)
 - 갱신: index.md — 새 페이지 2개 추가
+
+## [2026-06-18] ingest — Hermes Studio 정보 (해나)
+- 생성: [[hermes-studio]] (entity) — Hermes Studio Web UI: URL, 실행법, 접속방법, 용도 정리
+- 갱신: index.md — hermes-studio 추가
