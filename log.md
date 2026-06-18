@@ -24,3 +24,7 @@
 ## [2026-06-18] ingest — Hermes Studio 정보 (해나)
 - 생성: [[hermes-studio]] (entity) — Hermes Studio Web UI: URL, 실행법, 접속방법, 용도 정리
 - 갱신: index.md — hermes-studio 추가
+
+## [2026-06-19] ingest — 마스터님 전체 프로젝트 로드맵 (해나)
+- 생성: [[master-projects]] (concept) — 마스터님 6개 프로젝트 우선순위·데드라인 정리
+- 갱신: index.md — master-projects 추가
