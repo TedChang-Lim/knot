@@ -14,7 +14,13 @@
 - 미모 제안 KnowNet 대신 해나 제안 '모아' 채택
 - 심볼릭 링크 생성: `~/초보프로젝트/모아` → `~/초보프로젝트/knot`
 
-## [2026-06-18] ingest — 마스터님 상세 프로필·협동조합·줄리아 (미모)
+## [2026-06-19] decision — 모델 전략 최종 확정 (DeepSeek + GLM-4.6V 하이브리드)
+
+- auxiliary vision: MiMo V2.5 → **GLM-4.6V-Flash(z.ai, 무료)** 교체 완료
+- 일상 대화: DeepSeek V4 Flash 유지 (GLM-4.7-Flash는 Rate Limit+품질↓로 기각)
+- 생성: [[model-strategy]] (concept) — 모델 아키텍처 상세
+- z.ai(글로벌) Google 로그인 가입 완료, API 키 발급
+- bigmodel.cn(중국) 2,000만 토큰+2억 초대 보너스 검토 보류
 
 - 갱신: [[master-profile]] (source) — 상세 이력, 강의 장소, 홈페이지, 거주지 추가
 - 생성: [[meta-ai-labs]] (entity) — 메타 AI 랩스 협동조합 (이사진, 10대 사업, 정관)
