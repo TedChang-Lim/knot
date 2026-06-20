@@ -34,3 +34,23 @@
 ## [2026-06-19] ingest — 마스터님 전체 프로젝트 로드맵 (해나)
 - 생성: [[master-projects]] (concept) — 마스터님 6개 프로젝트 우선순위·데드라인 정리
 - 갱신: index.md — master-projects 추가
+
+## [2026-06-20] improvement — 3D 지식 그래프 개선 (미모)
+- `knot/graph.html` 파일 개선 완료
+- 변경 사항: 우주/네온 테마 배경, 자동 회전, 노드 상세 정보 팝업, 검색 기능
+- 마스터님 요청에 따라 해나, AG에게 전달 완료
+
+## [2026-06-20] addition — 카파시 가이드라인 포함 (미모)
+- `knot/CLAUDE.md`에 카파시 가이드라인 추가 완료
+- 핵심 원칙 6가지: 역할/맥락 명확화, 구체적 지시, 예시 제공, 단계별 설명, 출력 형식 정의, 제약조건 설정
+- mimo_proxy.py 시스템 프롬프트를 통해 자동 적용
+
+## [2026-06-21] addition — Kling AI API 정보 등록
+- 생성: [[kling-api]] (entity) — Kling API 키·크레딧·사용법 정리 (3,069P)
+- 갱신: index.md — kling-api 추가
+
+## [2026-06-20] skill-creation — 제드용 스킬 3개 생성 (미모)
+- `~/.agents/skills/feature-dev/SKILL.md` — 개발 구조화 스킬 (7단계 워크플로우)
+- `~/.agents/skills/code-review/SKILL.md` — 코드 검증 스킬 (6개 검토 항목)
+- `~/.agents/skills/commit-commands/SKILL.md` — Git 커밋 자동화 스킬
+- Claude Code 공식 플러그인을 참고하여 MiMo Code에 맞게 재구성

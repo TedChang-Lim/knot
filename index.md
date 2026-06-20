@@ -8,6 +8,7 @@
 ## entity
 - [[haena]] — 해나: Hermes Agent, 콘텐츠·총괄 (2026-06-18)
 - [[mimo]] — 미모: MiMo Code Agent, 코딩·파일작업 (2026-06-18)
+- [[kling-api]] — Kling AI API: 영상 생성 API 키·크레딧·사용법 (2026-06-21)
 - [[ag]] — AG: Antigravity IDE, 인프라·아키텍처 (2026-06-18)
 - [[julia]] — 김소영: 메타 AI 랩스 이사장, 영어교육·AI·XR (2026-06-18)
 - [[meta-ai-labs]] — 메타 AI 랩스 협동조합: AI·XR 융합 교육 (2026-06-18)
