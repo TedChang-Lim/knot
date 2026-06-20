@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>모아(MoA) 3D 지식 그래프</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a1a; overflow: hidden; font-family: 'Noto Sans KR', sans-serif; }
+  #graph { width: 100vw; height: 100vh; }
+  .info {
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    background: rgba(10,10,26,0.8); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 10px;
+    padding: 10px 20px; z-index: 100;
+    color: rgba(255,255,255,0.5); font-size: 12px; text-align: center;
+    pointer-events: none;
+  }
+  .title {
+    position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+    z-index: 100;
+    color: #fff; font-size: 18px; font-weight: 600;
+    text-align: center; pointer-events: none;
+    text-shadow: 0 0 20px rgba(100,200,255,0.3);
+  }
+  .title span {
+    background: linear-gradient(135deg, #ff6b6b, #ffd93d, #6bcbff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+</head>
+<body>
+<div class="title">🌱 <span>모아 (MoA)</span> 지식 그래프</div>
+<div class="info">🖱 드래그로 회전 · 휠로 확대/축소 · 노드에 마우스 올리면 이름 표시</div>
+<div id="graph"></div>
+
+<script src="https://unpkg.com/3d-force-graph@1.74/dist/3d-force-graph.min.js"></script>
+<script>
+// 노드 색상 팔레트
+const colors = {
+  center: '#ffd93d',
+  master: '#ff6b6b',
+  haena: '#6bcbff',
+  mimo: '#51cf66',
+  ag: '#cc5de8',
+  julia: '#f783ac',
+  qjan: '#ff922b',
+  project: '#20c997',
+  tools: '#ff6b6b',
+  repo: '#748ffc'
+};
+
+// 데이터 구성
+const data = {
+  nodes: [
+    // 중앙
+    { id: '모아 (MoA)', group: 'center', val: 20, color: colors.center },
+    // 마스터님 계열
+    { id: '마스터님', group: 'master', val: 12, color: colors.master },
+    { id: 'AI·XR 석사 2년', group: 'master', val: 5, color: colors.master },
+    { id: '30년차 사진작가', group: 'master', val: 5, color: colors.master },
+    { id: 'AI 강의', group: 'master', val: 6, color: colors.master },
+    { id: '협동조합 메타AI교육원', group: 'master', val: 7, color: colors.master },
+    { id: '2027 겸임교수', group: 'master', val: 4, color: colors.master },
+    // 해나
+    { id: '해나 (Hermes)', group: 'haena', val: 10, color: colors.haena },
+    { id: 'DeepSeek V4 Flash', group: 'haena', val: 6, color: colors.haena },
+    { id: 'DeepSeek V4 Pro', group: 'haena', val: 6, color: colors.haena },
+    { id: 'GLM-4.6V-Flash 🆓', group: 'haena', val: 5, color: colors.haena },
+    { id: 'Web UI (8648)', group: 'haena', val: 5, color: colors.haena },
+    // 미모
+    { id: '미모 (MiMo Code)', group: 'mimo', val: 10, color: colors.mimo },
+    { id: 'Zed Editor + ACP', group: 'mimo', val: 5, color: colors.mimo },
+    { id: 'MiMo V2.5 / Pro', group: 'mimo', val: 5, color: colors.mimo },
+    { id: '한·영·중 다국어', group: 'mimo', val: 3, color: colors.mimo },
+    // AG
+    { id: 'AG (Antigravity)', group: 'ag', val: 10, color: colors.ag },
+    { id: 'Gemini 3.5 Flash', group: 'ag', val: 5, color: colors.ag },
+    { id: 'Sonnet 4.6', group: 'ag', val: 5, color: colors.ag },
+    { id: '읽기 전용 모드', group: 'ag', val: 3, color: colors.ag },
+    // Julia
+    { id: 'Julia (김소영)', group: 'julia', val: 9, color: colors.julia },
+    { id: '영어교육 21년', group: 'julia', val: 5, color: colors.julia },
+    { id: 'VoiceFlow 앱', group: 'julia', val: 5, color: colors.julia },
+    { id: 'AI·XR 석사 1년', group: 'julia', val: 4, color: colors.julia },
+    // Q + Jan
+    { id: 'Q (Qwen)', group: 'qjan', val: 6, color: colors.qjan },
+    { id: 'Jan.ai + GGUF', group: 'qjan', val: 6, color: colors.qjan },
+    // 프로젝트
+    { id: '원주시 AI 강의', group: 'project', val: 5, color: colors.project },
+    { id: 'AI 영화 제작', group: 'project', val: 5, color: colors.project },
+    { id: '바이브코딩', group: 'project', val: 5, color: colors.project },
+    { id: 'Zero-G Barista', group: 'project', val: 4, color: colors.project },
+    // 도구
+    { id: 'Kling AI Pro', group: 'tools', val: 4, color: colors.tools },
+    { id: 'Veo 3.1', group: 'tools', val: 4, color: colors.tools },
+    { id: '모아(knot)', group: 'repo', val: 7, color: colors.repo },
+    { id: 'hermes-ag-shared', group: 'repo', val: 4, color: colors.repo },
+  ],
+  links: [
+    // 중앙 → 메인
+    { source: '모아 (MoA)', target: '마스터님' },
+    { source: '모아 (MoA)', target: '해나 (Hermes)' },
+    { source: '모아 (MoA)', target: '미모 (MiMo Code)' },
+    { source: '모아 (MoA)', target: 'AG (Antigravity)' },
+    { source: '모아 (MoA)', target: 'Julia (김소영)' },
+    { source: '모아 (MoA)', target: 'Q (Qwen)' },
+    { source: '모아 (MoA)', target: 'Jan.ai + GGUF' },
+    { source: '모아 (MoA)', target: '모아(knot)' },
+    // 마스터님
+    { source: '마스터님', target: 'AI·XR 석사 2년' },
+    { source: '마스터님', target: '30년차 사진작가' },
+    { source: '마스터님', target: 'AI 강의' },
+    { source: '마스터님', target: '협동조합 메타AI교육원' },
+    { source: '마스터님', target: '2027 겸임교수' },
+    // 해나
+    { source: '해나 (Hermes)', target: 'DeepSeek V4 Flash' },
+    { source: '해나 (Hermes)', target: 'DeepSeek V4 Pro' },
+    { source: '해나 (Hermes)', target: 'GLM-4.6V-Flash 🆓' },
+    { source: '해나 (Hermes)', target: 'Web UI (8648)' },
+    { source: '해나 (Hermes)', target: '모아(knot)' },
+    // 미모
+    { source: '미모 (MiMo Code)', target: 'Zed Editor + ACP' },
+    { source: '미모 (MiMo Code)', target: 'MiMo V2.5 / Pro' },
+    { source: '미모 (MiMo Code)', target: '한·영·중 다국어' },
+    // AG
+    { source: 'AG (Antigravity)', target: 'Gemini 3.5 Flash' },
+    { source: 'AG (Antigravity)', target: 'Sonnet 4.6' },
+    { source: 'AG (Antigravity)', target: '읽기 전용 모드' },
+    // Julia
+    { source: 'Julia (김소영)', target: '영어교육 21년' },
+    { source: 'Julia (김소영)', target: 'VoiceFlow 앱' },
+    { source: 'Julia (김소영)', target: 'AI·XR 석사 1년' },
+    // 프로젝트
+    { source: '협동조합 메타AI교육원', target: '원주시 AI 강의' },
+    { source: '협동조합 메타AI교육원', target: 'AI 영화 제작' },
+    { source: '협동조합 메타AI교육원', target: '바이브코딩' },
+    { source: 'AI 영화 제작', target: 'Zero-G Barista' },
+    // 연결
+    { source: 'DeepSeek V4 Flash', target: 'DeepSeek V4 Pro' },
+    { source: 'GLM-4.6V-Flash 🆓', target: '해나 (Hermes)' },
+    { source: '모아(knot)', target: 'hermes-ag-shared' },
+    { source: '모아(knot)', target: '원주시 AI 강의' },
+  ]
+};
+
+const Graph = ForceGraph3D()(document.getElementById('graph'))
+  .graphData(data)
+  .nodeLabel(node => node.id)
+  .nodeAutoColorBy('group')
+  .nodeVal(node => node.val || 5)
+  .nodeResolution(12)
+  .linkColor(() => 'rgba(255,255,255,0.15)')
+  .linkWidth(0.5)
+  .backgroundColor('#0a0a1a')
+  .d3AlphaDecay(0.02)
+  .d3VelocityDecay(0.1)
+  .warmupTicks(100)
+  .cooldownTicks(0)
+  .enableNodeDrag(true)
+  .enableNavigationControls(true)
+  .showNavInfo(false);
+
+// 카메라 초기 위치
+Graph.cameraPosition({ z: 300 });
+</script>
+</body>
+</html>
