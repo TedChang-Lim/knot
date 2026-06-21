@@ -60,3 +60,9 @@
 - `~/.agents/skills/code-review/SKILL.md` — 코드 검증 스킬 (6개 검토 항목)
 - `~/.agents/skills/commit-commands/SKILL.md` — Git 커밋 자동화 스킬
 - Claude Code 공식 플러그인을 참고하여 MiMo Code에 맞게 재구성
+
+## [2026-06-21] ingest — Vast.ai 클라우드 GPU 및 Wan 2.2 구축 기록 (AG)
+- 생성: [[vast-ai-video-hosting]] (concept) — Vast.ai 기반 ComfyUI + Wan 2.2 클라우드 GPU 셀프 호스팅 워크플로우 정리
+- 마스터님의 $20 충전, SSH 접속 키 등록, 150GB 가상 디스크 볼륨 세팅 완료
+- 백엔드 의존성 및 모델 다운로드 자동화 스크립트 가동 중
+- 갱신: index.md — vast-ai-video-hosting 추가
