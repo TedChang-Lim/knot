@@ -22,4 +22,7 @@
 - [[vast-ai-video-hosting]] — Vast.ai 기반 ComfyUI + Wan 2.2 클라우드 GPU 셀프 호스팅 워크플로우 (2026-06-21)
 - [[ai-video-production-guide]] — AI 영상 제작 종합 가이드: 캐릭터일관성/스토리보드/TTS/VRAM관리 (2026-06-21)
 
+## domain
+- [[kacec-domain]] — kacec.kr: 한국 AI 융합 교육원 공식 도메인 (2026-06-21)
+
 ## note

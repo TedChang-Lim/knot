@@ -35,6 +35,16 @@
 - 생성: [[master-projects]] (concept) — 마스터님 6개 프로젝트 우선순위·데드라인 정리
 - 갱신: index.md — master-projects 추가
 
+## [2026-06-21] achievement — 공식 도메인 kacec.kr 등록
+
+- 등록: kacec.kr (도메인클럽, 13,200원/년, 신규=연장 동일가)
+- 연결: GitHub Pages (tedchang-lim.github.io/meta-ai-labs) HTTP 고정포워딩
+- HTTPS: GitHub Pages 인증서 발급 대기 중
+- 생성: [[kacec-domain]] (domain) — 도메인 상세 정보
+- 갱신: index.md — domain 카테고리 추가
+- 서브도메인 계획: s.kacec.kr(스튜디오), w.kacec.kr(워크), j.kacec.kr(줄리아)
+- 도메인클럽 선택 이유: 신규=연장 동일가, 장기적으로 국내 최저가
+
 ## [2026-06-20] improvement — 3D 지식 그래프 개선 (미모)
 - `knot/graph.html` 파일 개선 완료
 - 변경 사항: 우주/네온 테마 배경, 자동 회전, 노드 상세 정보 팝업, 검색 기능
