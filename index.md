@@ -18,5 +18,6 @@
 - [[agent-team]] — 5인 AI 에이전트 협업 체계 (2026-06-18)
 - [[master-projects]] — 마스터님 전체 프로젝트 로드맵 (2026-06-18)
 - [[model-strategy]] — 모델 아키텍처: DeepSeek+GLM-4.6V 하이브리드 (2026-06-19)
+- [[ai-video-pipeline]] — AI 영상 제작 파이프라인: MCP 기반 5단계 워크플로우 (2026-06-21)
 
 ## note

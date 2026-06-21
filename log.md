@@ -49,6 +49,12 @@
 - 생성: [[kling-api]] (entity) — Kling API 키·크레딧·사용법 정리 (3,069P)
 - 갱신: index.md — kling-api 추가
 
+## [2026-06-21] analysis — AI 영상 제작 파이프라인 (MCP 기반)
+- 생성: [[ai-video-pipeline]] (concept) — N잡학교 Higgsfield MCP 사례 분석
+- 5단계 파이프라인: 시나리오→마스터시트→캐릭터디자인→스토리보드→영상생성
+- 캐릭터 일관성 핵심: 다각도 디자인 시트(Turnaround Sheet) 기법
+- 갱신: index.md — ai-video-pipeline 추가
+
 ## [2026-06-20] skill-creation — 제드용 스킬 3개 생성 (미모)
 - `~/.agents/skills/feature-dev/SKILL.md` — 개발 구조화 스킬 (7단계 워크플로우)
 - `~/.agents/skills/code-review/SKILL.md` — 코드 검증 스킬 (6개 검토 항목)
