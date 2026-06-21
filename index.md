@@ -20,5 +20,6 @@
 - [[model-strategy]] — 모델 아키텍처: DeepSeek+GLM-4.6V 하이브리드 (2026-06-19)
 - [[ai-video-pipeline]] — AI 영상 제작 파이프라인: MCP 기반 5단계 워크플로우 (2026-06-21)
 - [[vast-ai-video-hosting]] — Vast.ai 기반 ComfyUI + Wan 2.2 클라우드 GPU 셀프 호스팅 워크플로우 (2026-06-21)
+- [[ai-video-production-guide]] — AI 영상 제작 종합 가이드: 캐릭터일관성/스토리보드/TTS/VRAM관리 (2026-06-21)
 
 ## note
