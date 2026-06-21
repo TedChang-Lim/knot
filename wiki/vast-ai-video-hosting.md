@@ -78,3 +78,21 @@ hf_hub_download(repo_id='Kijai/WanVideo_comfy', filename='Wan2_2-I2V-A14B-LOW_bf
 ## 🚀 4. 한 줄 요약: "비디오 프로덕션의 민주화"
 
 이로써 마스터님은 맥북의 수명을 단축시키는 발열 스트레스에서 완전히 해방되었으며, 한 달에 1만 원 내외의 커피 한 잔 값으로 힉스필드나 클링 상용 API를 능가하는 **'오픈소스 Wan 2.2 비디오 가속 인프라'**를 독점 소유하게 되었습니다. 이 실전 구축 스토리는 향후 출판될 마스터님의 에이전트 가이드북에서 **"비용 절감과 기술 실증을 동시에 잡은 퍼스널 AI 프로덕션 혁명"** 챕터의 핵심 소스로 사용될 예정입니다.
+
+---
+
+## 🖥️ 5. 실시간 인스턴스 접속 정보 (보안 주의)
+
+현재 구축되어 구동 중인 실시간 Vast.ai 서버 정보입니다. 작업 시 참고하시기 바랍니다.
+
+*   **ComfyUI Web UI**: Vast.ai 콘솔에서 해당 인스턴스의 **"Open"** 버튼 클릭 (Caddy 프록시 우회 인증 쿠키 필요)
+    *   *Direct Address*: `http://134.228.156.212:40449`
+*   **SSH 터미널 접속**: `ssh -p 40451 root@134.228.156.212` (로컬 개인키 `~/.ssh/id_ed25519` 사용)
+*   **ComfyUI API 엔드포인트**: `http://134.228.156.212:40446`
+*   **사전 배치 모델 목록**:
+    *   `Wan2_2_VAE_bf16.safetensors` (VAE)
+    *   `umt5-xxl-enc-fp8_e4m3fn.safetensors` (Text Encoder)
+    *   `Wan2_1-T2V-14B_fp8.safetensors` (T2V 14B)
+    *   `Wan2_2-I2V-A14B-LOW_bf16.safetensors` (I2V 14B)
+    *   `google_siglip-so400m-patch14-384.safetensors` (Clip Vision)
+
