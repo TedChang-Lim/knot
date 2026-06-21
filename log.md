@@ -71,9 +71,15 @@
 - `~/.agents/skills/commit-commands/SKILL.md` — Git 커밋 자동화 스킬
 - Claude Code 공식 플러그인을 참고하여 MiMo Code에 맞게 재구성
 
-## [2026-06-21] ingest — Vast.ai 클라우드 GPU 및 Wan 2.2 구축 기록 (AG)
-- 생성: [[vast-ai-video-hosting]] (concept) — Vast.ai 기반 ComfyUI Wan 2.2 셀프 호스팅 (2026-06-21)
-- 생성: [[ai-video-production-guide]] (concept) — AI 영상 제작 종합 가이드 (2026-06-21)
-- 마스터님의 $20 충전, SSH 접속 키 등록, 150GB 가상 디스크 볼륨 세팅 완료
-- 백엔드 의존성 및 모델 다운로드 자동화 스크립트 가동 중
-- 갱신: index.md — vast-ai-video-hosting 추가
+## [2026-06-21] addition — Vast.ai 클라우드 GPU 및 Wan 2.2 구축 기록 (AG)
+|- 생성: [[vast-ai-video-hosting]] (concept) — Vast.ai 기반 ComfyUI Wan 2.2 셀프 호스팅 (2026-06-21)
+|- 생성: [[ai-video-production-guide]] (concept) — AI 영상 제작 종합 가이드 (2026-06-21)
+|- 마스터님의 $20 충전, SSH 접속 키 등록, 150GB 가상 디스크 볼륨 세팅 완료
+|- 백엔드 의존성 및 모델 다운로드 자동화 스크립트 가동 중
+|- 갱신: index.md — vast-ai-video-hosting 추가
+
+## [2026-06-21] addition — 왕초보 AI 강의 제작 방법론 (해나)
+|- 생성: [[tedchang-lecture-production]] (concept) — 테드창 왕초보 AI 강의 제작 방법론
+|- 내용: 30년 강의 경험 기반, 예·복습 제로, ChatGPT+Gemini 전용, 노트북LM 호환
+|- 갱신: index.md — tedchang-lecture-production 추가
+|- 1강·2강 시나리오 완료: ~/Desktop/강의_시나리오_1강.md, 강의_시나리오_2강.md
