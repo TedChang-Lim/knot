@@ -23,6 +23,7 @@
 |- [[karpathy-guidelines]] — Karpathy의 LLM 코딩 가이드라인 — 단순성·수술적 변경·목표 기반 (2026-06-22)
 - [[ai-video-production-guide]] — AI 영상 제작 종합 가이드: 캐릭터일관성/스토리보드/TTS/VRAM관리 (2026-06-21)
 |- [[tedchang-lecture-production]] — 테드창 왕초보 AI 강의 제작 방법론 (2026-06-21)
+|- [[gemini-live-translate-business]] — Gemini 3.5 Live Translate 비즈니스 기회 분석: K-뷰티 통역·이주여성센터·의료관광 (2026-06-22)
 
 ## domain
 - [[kacec-domain]] — kacec.kr: 한국 AI 융합 교육원 공식 도메인 (2026-06-21)

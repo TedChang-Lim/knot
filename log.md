@@ -91,3 +91,11 @@
 |- 내용: 30년 강의 경험 기반, 예·복습 제로, ChatGPT+Gemini 전용, 노트북LM 호환
 |- 갱신: index.md — tedchang-lecture-production 추가
 |- 1강·2강 시나리오 완료: ~/Desktop/강의_시나리오_1강.md, 강의_시나리오_2강.md
+|
+|## [2026-06-22] ingest — Gemini 3.5 Live Translate 비즈니스 기회 분석
+|- 생성: [[gemini-live-translate-business]] (concept) — Gemini Live Translate 활용 사업 아이디어
+|- 내용: K-뷰티 의료통역 SaaS / 이주여성센터 통역 / 의료관광 플랫폼 3개 모델
+|- 정책 검증: Google API 상업적 재판매 명시적 허용 확인
+|- 마스터님 실제 테스트: "통역사 데리고 다니는 것 같다" 수준 확인
+|- 갱신: index.md — gemini-live-translate-business 추가
+|- 상태: 마스터님이 결정 보류 중. AG·미모에게 의견 요청 예정
