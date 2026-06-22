@@ -32,7 +32,7 @@
 ## 기술 정보
 
 - 포워딩: HTTP 고정포워딩 (도메인클럽)
-- HTTPS: 발급 대기 중 (GitHub Pages 인증서)
+- HTTPS: 발급 완료 (GitHub Pages Let's Encrypt 인증서 적용 및 Enforce HTTPS 강제 적용 완료)
 - DNS: 도메인클럽 기본 네임서버 (ns1/ns2.ibrain.kr)
 
 ## 선정 이유
@@ -45,3 +45,4 @@
 ## 변경 이력
 
 - 2026-06-21: 최초 등록, HTTP 고정포워딩 설정
+- 2026-06-22: GitHub Pages SSL 인증서(Let's Encrypt) 발급 성공 및 Enforce HTTPS 강제 활성화 완료 (보안 연결 접속 가능).

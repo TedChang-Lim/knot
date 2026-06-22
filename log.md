@@ -1,5 +1,12 @@
 # log
 
+## [2026-06-22] achievement — kacec.kr HTTPS 보안 연결 활성화 완료
+
+- 설정: GitHub Pages 설정에서 kacec.kr 도메인 재생성을 통한 SSL 인증서(Let's Encrypt) 재발급 강제 트리거
+- 활성화: `Enforce HTTPS` 옵션 적용 완료
+- 검증: https://kacec.kr 보안 접속 정상 응답(HTTP 200) 및 자물쇠 마크 표출 완료
+- 갱신: [[kacec-domain]] (domain) — HTTPS 상태 완료로 업데이트
+
 ## [2026-06-18] ingest — 마스터님 프로필·팀 프로필·의사결정
 
 - 생성: [[master-profile]] (source) — 마스터님 6in1 프로필
