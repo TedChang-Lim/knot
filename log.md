@@ -117,3 +117,14 @@
 - 협동조합 사업 영역에 콘텐츠 자동화 부문 추가 필요성 확인
 - 전자책 활용: "AI 에이전트 협업 대화록" 시리즈 핵심 테마
 - 갱신: index.md — content-automation-vision 추가
+
+## [2026-06-23] entity — 마스터님 프로필 전면 보강 (soul.md 연동)
+
+- 갱신: [[master-profile]] (source→entity) — SOUL.md 내용 반영
+  - frontmatter: type=entity, aliases 추가
+  - 추가 정보: 대화 규칙(전 에이전트 공통), 차량(에디/타스), 생활 정보
+  - 추가: 마스터님 취향(좋아하는 것/싫어하는 것), AI 에이전트 체계, 모델 가격표
+  - 반영: GLM 5.2(bigmodel.cn) 사용 중단, Fallback=DS V4 Flash로 변경
+- 생성: ~/.hermes/soul.md — 마스터님 영구 컨텍스트 파일
+- 공유: to-ag.md — AG·미모에게 soul.md 내용 전파
+- 갱신: index.md — master-profile source→entity 이동
