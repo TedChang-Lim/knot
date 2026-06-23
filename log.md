@@ -97,5 +97,14 @@
 |- 내용: K-뷰티 의료통역 SaaS / 이주여성센터 통역 / 의료관광 플랫폼 3개 모델
 |- 정책 검증: Google API 상업적 재판매 명시적 허용 확인
 |- 마스터님 실제 테스트: "통역사 데리고 다니는 것 같다" 수준 확인
-|- 갱신: index.md — gemini-live-translate-business 추가
-|- 상태: 마스터님이 결정 보류 중. AG·미모에게 의견 요청 예정
+- 갱신: index.md — gemini-live-translate-business 추가
+- 상태: 마스터님이 결정 보류 중. AG·미모에게 의견 요청 예정
+
+## [2026-06-23] concept — 에이전트 표준 전쟁과 멀티 소켓 비유
+
+- 생성: [[agent-standard-war-multisocket]] (concept) — 마스터님의 멀티 소켓 비유
+- 핵심 통찰: "표준이 꼭 한 개일 필요가 없다" — MCP/ACP/A2A/ARD 각 표준에 멀티 소켓으로 대응
+- 브라우저(HTTP/HTTPS/WebSocket) 비유: 에이전트도 여러 소켓 장착하고 자동 fallback
+- 시사점: 미래에는 to-*.md/모아 불필요해질 수 있으나, 당분간은 파일 기반 통신 유지
+- 전자책 활용: "AI 에이전트 협업 대화록" 시리즈 소스로 사용 가능
+- 갱신: index.md — agent-standard-war-multisocket 추가
